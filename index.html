@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Compras</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <h1>Lista de compras</h1>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Compras</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/stylesgeneral.css">
+    </head>
+    <body>
+        <header>
+            <h1>Lista de compras</h1>
+        </header>
 
-    <main>      
-        
-        <!--
+        <main>
+
+            <!--
         <section id="form-compra">
             
             
@@ -28,66 +29,62 @@
 
         </section>
         -->
-        
 
-        <section id="form-compra">
-            <form action="" class="frmProduto">
-                <!-- Grupo de Campos -->
-                <fieldset>
-                    <legend>Adicionar Novo Produto</legend>
-        
-                    <!-- Nome do Produto -->
-                    <div class="form-group">
-                        <label for="nomeProduto">Nome do Produto:</label>
-                        <input type="text" id="nomeProduto" name="nomeProduto" placeholder="Ex: Arroz" required>
-                    </div>
-        
-                    <!-- Quantidade -->
-                    <div class="form-group">
-                        <label for="quantidade">Quantidade:</label>
-                        <input type="number" id="quantidade" name="quantidade" placeholder="Ex: 2" step="any" min="1" required>
-                    </div>
-        
-                    <!-- Valor Unitário -->
-                    <div class="form-group">
-                        <label for="valorUnitario">Valor Unitário:</label>
-                        <input type="number" id="valorUnitario" name="valorUnitario" placeholder="Ex: R$9.99" step="0.01" min="0" required>
-                    </div>
-        
-                    <!-- Categoria -->
-                    <div class="form-group">
-                        <label for="categoria">Categoria:</label>
-                        <input type="text" id="categoria" name="categoria" placeholder="Ex: Alimentos">
-                    </div>
-        
-                    <!-- Botão de Envio -->
-                    <div class="form-group">
-                        <button type="submit">Adicionar Produto</button>
-                    </div>
-                </fieldset>
-            </form>
-        </section>
+            <section id="form-compra">
+                <form action class="frmProduto">
+                    <!-- Grupo de Campos -->
+                    <fieldset>
+                        <legend>Adicionar Novo Produto</legend>
+            
+                        <!-- Container Flexível para os Campos -->
+                        <div class="form-container">
+                            <!-- Nome do Produto -->
+                            <div class="form-group">
+                                <label for="nomeProduto">Produto:</label>
+                                <input type="text" id="nomeProduto" name="nomeProduto" placeholder="Ex: Arroz" required>
+                            </div>
+            
+                            <!-- Quantidade -->
+                            <div class="form-group">
+                                <label for="quantidade">Quantidade:</label>
+                                <input type="number" id="quantidade" name="quantidade" placeholder="Ex: 2" step="any" min="1" required>
+                            </div>
+            
+                            <!-- Valor Unitário -->
+                            <div class="form-group">
+                                <label for="valorUnitario">Vl. Uni.:</label>
+                                <input type="number" id="valorUnitario" name="valorUnitario" placeholder="Ex: R$9.99" step="0.01" min="0" required>
+                            </div>
+            
+                            <!-- Categoria -->
+                            <div class="form-group">
+                                <label for="categoria">Categoria:</label>
+                                <input type="text" id="categoria" name="categoria" placeholder="Ex: Alimentos">
+                            </div>
+                        </div>
+            
+                        <!-- Botão de Envio -->
+                        <div class="form-group">
+                            <button type="submit">Adicionar Produto</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
 
+            <section id="lista-pendentes">
 
+            </section>
 
-        <section id="lista-pendentes">
+            <section id="lista-finalizados">
 
+            </section>
 
+        </main>
 
-        </section>
+        <footer>
+            <p>&copy; 2025 Erick Rodrigues</p>
+        </footer>
 
-        <section id="lista-finalizados">
-
-
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Erick Rodrigues</p>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
+        <script src="js/script.js"></script>
+    </body>
 </html>

@@ -1,0 +1,85 @@
+/* Estilos do Formulário */
+#form-compra .frmProduto {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#form-compra fieldset {
+    border: none;
+    padding: 0;
+}
+
+#form-compra legend {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #6200ea;
+    margin-bottom: 15px;
+}
+
+#form-compra .form-container {
+    display: flex;
+    gap: 10px; /* Usaremos gap novamente com cálculo correto */
+    width: 100%;
+    box-sizing: border-box;
+}
+#form-compra .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Base igual para todos */
+    min-width: 0; /* Permite que os campos encolham */
+}
+/* Tamanhos Proporcionais*/
+#form-compra .form-group:nth-child(1) { flex: 8; } /* Nome produto */
+#form-compra .form-group:nth-child(2) { flex: 2; }  /* Quantidade */
+#form-compra .form-group:nth-child(3) { flex: 2; }  /* Valor */
+#form-compra .form-group:nth-child(4) { flex: 6; }  /* Categoria */
+
+/* Campos ocupam 100% do espaço do form-group */
+#form-compra input[type="text"],
+#form-compra input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-right: 0; /* Removemos a margem lateral */
+}
+/* Remove a margem do último campo */
+#form-compra .form-container input:last-child {
+    margin-right: 0;
+}
+
+/* Tamanhos Proporcionais dos Campos */
+#form-compra #nomeProduto {
+    flex: 8; /* Tamanho 10 */
+}
+
+#form-compra #quantidade {
+    flex: 2; /* Tamanho 1 */
+}
+
+#form-compra #valorUnitario {
+    flex: 2; /* Tamanho 1 */
+}
+
+#form-compra #categoria {
+    flex: 6; /* Tamanho 6 */
+}
+/* Botão de Envio */
+#form-compra button {
+    padding: 10px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+#form-compra button:hover {
+    background-color: #3700b3;
+}
