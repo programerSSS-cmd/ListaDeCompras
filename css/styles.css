@@ -31,10 +31,10 @@
     min-width: 0; /* Permite que os campos encolham */
 }
 /* Tamanhos Proporcionais*/
-#form-compra .form-group:nth-child(1) { flex: 8; } /* Nome produto */
-#form-compra .form-group:nth-child(2) { flex: 2; }  /* Quantidade */
-#form-compra .form-group:nth-child(3) { flex: 2; }  /* Valor */
-#form-compra .form-group:nth-child(4) { flex: 6; }  /* Categoria */
+#form-compra .form-group:nth-child(1) { flex: 10; } /* Nome produto */
+#form-compra .form-group:nth-child(2) { flex: 3; }  /* Quantidade */
+#form-compra .form-group:nth-child(3) { flex: 3; }  /* Valor */
+#form-compra .form-group:nth-child(4) { flex: 2; }  /* Total*/
 
 /* Campos ocupam 100% do espaço do form-group */
 #form-compra input[type="text"],
@@ -53,19 +53,19 @@
 
 /* Tamanhos Proporcionais dos Campos */
 #form-compra #nomeProduto {
-    flex: 8; /* Tamanho 10 */
+    flex: 10; /* Tamanho 10 */
 }
 
 #form-compra #quantidade {
-    flex: 2; /* Tamanho 1 */
+    flex: 3; /* Tamanho 1 */
 }
 
 #form-compra #valorUnitario {
-    flex: 2; /* Tamanho 1 */
+    flex: 3; /* Tamanho 1 */
 }
 
-#form-compra #categoria {
-    flex: 6; /* Tamanho 6 */
+#form-compra #total {
+    flex: 2; /* Tamanho 6 */
 }
 /* Botão de Envio */
 #form-compra button {

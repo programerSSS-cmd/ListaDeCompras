@@ -1,0 +1,70 @@
+/* Responsividade para Telas com 820px */
+@media (max-width: 820px) {
+    /* Ajustes no Formulário */
+    #form-compra .form-container {
+        gap: 10px; /* Mantém o espaçamento entre os campos */
+    }
+
+    /* Todos os campos com a mesma medida (flex: 4.5) */
+    #form-compra .form-group {
+        flex: 4.5 !important; /* Sobrescreve as proporções anteriores */
+    }
+
+    /* Ajustes nos Inputs */
+    #form-compra input[type="text"],
+    #form-compra input[type="number"] {
+        font-size: 0.9em; /* Reduz o tamanho da fonte */
+        padding: 6px; /* Reduz o padding */
+    }
+
+    /* Ajustes no Botão */
+    #form-compra button {
+        font-size: 0.9em; /* Reduz o tamanho da fonte do botão */
+        padding: 8px; /* Reduz o padding do botão */
+    }
+}
+
+/* Responsividade para Telas com 680px */
+@media (max-width: 680px) {
+    /* Ajustes nos Inputs */
+    #form-compra input[type="text"],
+    #form-compra input[type="number"] {
+        font-size: 0.85em; /* Reduz o tamanho da fonte */
+        padding: 5px; /* Reduz o padding */
+    }
+
+    /* Ajustes no Botão */
+    #form-compra button {
+        font-size: 0.85em; /* Reduz o tamanho da fonte do botão */
+        padding: 7px; /* Reduz o padding do botão */
+    }
+}
+
+/* Responsividade para Telas com 480px */
+@media (max-width: 480px) {
+    /* Ajustes no Formulário */
+    #form-compra .form-container {
+        flex-direction: column; /* Campos em coluna */
+        gap: 8px; /* Espaçamento entre os campos */
+    }
+
+    /* Todos os campos ocupam 100% da largura */
+    #form-compra .form-group {
+        width: 100%; /* Ocupa 100% da largura */
+        flex: none !important; /* Remove a flexibilidade */
+    }
+
+    /* Ajustes nos Inputs */
+    #form-compra input[type="text"],
+    #form-compra input[type="number"] {
+        font-size: 0.8em; /* Reduz o tamanho da fonte */
+        padding: 5px; /* Reduz o padding */
+    }
+
+    /* Ajustes no Botão */
+    #form-compra button {
+        font-size: 0.8em; /* Reduz o tamanho da fonte do botão */
+        padding: 6px; /* Reduz o padding do botão */
+        width: 100%; /* Ocupa 100% da largura */
+    }
+}
