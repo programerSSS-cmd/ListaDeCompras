@@ -34,7 +34,8 @@
 #form-compra .form-group:nth-child(1) { flex: 10; } /* Nome produto */
 #form-compra .form-group:nth-child(2) { flex: 3; }  /* Quantidade */
 #form-compra .form-group:nth-child(3) { flex: 3; }  /* Valor */
-#form-compra .form-group:nth-child(4) { flex: 2; }  /* Total*/
+#form-compra .form-group:nth-child(4) { flex: 2; }  /* Espaço*/
+#form-compra .form-group:nth-child(5) { flex: 2; }  /* Total*/
 
 /* Campos ocupam 100% do espaço do form-group */
 #form-compra input[type="text"],
@@ -63,7 +64,9 @@
 #form-compra #valorUnitario {
     flex: 3; /* Tamanho 1 */
 }
-
+#form-compra #form-group-invisible {
+    flex: 0; /* Tamanho 0 */
+}
 #form-compra #total {
     flex: 2; /* Tamanho 6 */
 }
@@ -82,4 +85,7 @@
 
 #form-compra button:hover {
     background-color: #3700b3;
+}
+#form-group-invisible{
+    visibility: hidden;
 }
