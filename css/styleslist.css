@@ -1,0 +1,88 @@
+/* Container das Listas */
+.listas-container {
+    display: flex; /* Layout flexível */
+    gap: 20px; /* Espaço entre as listas */
+    width: 100%; /* Ocupa 100% da largura disponível */
+}
+
+/* Estilos das Listas */
+#lista-pendentes,
+#lista-finalizados {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Cada lista ocupa metade do espaço */
+}
+
+
+
+/* Container das Listas */
+.listas-container {
+    display: flex;
+    gap: 20px; /* Espaço entre as listas */
+    width: 100%;
+    margin-top: 30px; /* Espaço acima das listas */
+}
+
+/* Estilos Gerais das Listas */
+#lista-pendentes,
+#lista-finalizados {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Cada lista ocupa metade do espaço */
+}
+
+/* Títulos das Listas */
+#lista-pendentes h2,
+#lista-finalizados h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #6200ea; /* Cor roxa para combinar com o formulário */
+    margin-bottom: 15px;
+}
+
+/* Itens da Lista */
+.task-box {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Texto dos Itens */
+.task-box .produto-valores {
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Ícones de Ação */
+.task-box ion-icon {
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.task-box .btn-done {
+    color: #28a745; /* Verde para o ícone de concluído */
+}
+
+.task-box .btn-done:hover {
+    color: #218838; /* Verde mais escuro no hover */
+}
+
+.task-box .btn-remove {
+    color: #dc3545; /* Vermelho para o ícone de remover */
+}
+
+.task-box .btn-remove:hover {
+    color: #c82333; /* Vermelho mais escuro no hover */
+}
+

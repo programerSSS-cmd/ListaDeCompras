@@ -20,8 +20,13 @@ header {
 }
 
 main {
-    flex: 1; /* Faz o main ocupar o espaço restante */
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaço entre formulário e listas */
+    max-width: 1200px; /* Aumente a largura máxima */
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
 }
 
 footer {

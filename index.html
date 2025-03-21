@@ -7,6 +7,11 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/stylesgeneral.css">
         <link rel="stylesheet" href="css/response.css">
+        <link rel="stylesheet" href="css/styleslist.css">
+        <!--Biblioteca de icones-->
+        <script type="module"
+            src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+
     </head>
     <body>
         <header>
@@ -19,58 +24,87 @@
                     <!-- Grupo de Campos -->
                     <fieldset>
                         <legend>Adicionar Novo Produto</legend>
-            
+
                         <!-- Container Flexível para os Campos -->
                         <div class="form-container">
                             <!-- Nome do Produto -->
                             <div class="form-group">
                                 <label for="nomeProduto">Produto:</label>
-                                <input type="text" id="nomeProduto" name="nomeProduto" placeholder="Ex: Arroz" required>
+                                <input type="text" id="nomeProduto"
+                                    name="nomeProduto" placeholder="Ex: Arroz"
+                                    required>
                             </div>
-            
+
                             <!-- Quantidade -->
                             <div class="form-group">
                                 <label for="quantidade">Quantidade:</label>
-                                <input type="number" id="quantidade" name="quantidade" placeholder="Ex: 2" step="any" min="1" required>
+                                <input type="number" id="quantidade"
+                                    name="quantidade" placeholder="Ex: 2"
+                                    step="any" min="1" required>
                             </div>
-            
+
                             <!-- Valor Unitário -->
                             <div class="form-group">
                                 <label for="valorUnitario">Vl. Uni.:</label>
-                                <input type="number" id="valorUnitario" name="valorUnitario" placeholder="Ex: R$9.99" step="0.01" min="0" required>
+                                <input type="number" id="valorUnitario"
+                                    name="valorUnitario"
+                                    placeholder="Ex: R$9.99" step="0.01" min="0"
+                                    required>
                             </div>
-            
+
                             <!-- Total -->
                             <div class="form-group">
                                 <label for="Total">Total:</label>
-                                <input type="text" id="Total" name="Total" placeholder="R$ 0,00" readonly>
+                                <input type="text" id="Total" name="Total"
+                                    placeholder="R$ 0,00" readonly>
                             </div>
 
-                             <!-- Total -->
-                             <div class="form-group" id="form-group-invisible">
+                            <!-- Total -->
+                            <div class="form-group" id="form-group-invisible">
                                 <label for="espaco">Espaco</label>
-                                <input type="text" id="Espaco" name="espaco"  readonly>
+                                <input type="text" id="Espaco" name="espaco"
+                                    readonly>
                             </div>
-                            
+
                         </div>
-            
+
                         <!-- Botão de Envio -->
                         <div class="form-group">
                             <label for="botao-adiciona">Adicionar:</label>
-                            <button type="submit">Produto</button>
+                            <button type="submit" id="btn-add">+</button>
                         </div>
                     </fieldset>
                 </form>
             </section>
 
-            <section id="lista-pendentes">
-
+            <section class="listas-container">
+                <section id="lista-pendentes">
+                    <h2>Pendentes</h2>
+                    <ul id="lista-prod-pendente">
+                        <li class="task-box template">
+                            <span class="produto-valores">
+                                valores
+                                <ion-icon class="btn-done" name="checkmark-outline"></ion-icon>
+                                <ion-icon class="btn-remove" name="close-outline"></ion-icon>
+                            </span>
+                        </li>
+                    </ul>
+                </section>
+            
+                <section id="lista-finalizados">
+                    <h2>Finalizados</h2>
+                    <ul id="lista-prod-pegos">
+                        <li class="task-box template">
+                            <span class="produto-valores">
+                                valores
+                                <ion-icon class="btn-done" name="checkmark-outline"></ion-icon>
+                                <ion-icon class="btn-remove" name="close-outline"></ion-icon>
+                            </span>
+                        </li>
+                    </ul>
+                </section>
             </section>
-
-            <section id="lista-finalizados">
-
             </section>
-
         </main>
 
         <footer>
