@@ -89,3 +89,11 @@
 #form-group-invisible{
     visibility: hidden;
 }
+.task-box {
+    transition: all 0.3s ease;
+}
+
+.task-box.moving {
+    opacity: 0;
+    transform: translateX(20px);
+}

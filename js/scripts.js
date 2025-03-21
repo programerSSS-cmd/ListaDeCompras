@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Selecionar elementos do formulário
     const form = document.querySelector('.frmProduto');
     const quantidadeInput = document.getElementById('quantidade');
@@ -14,19 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const quantidade = parseFloat(quantidadeInput.value) || 0;
         const valorUnitario = parseFloat(valorUnitarioInput.value) || 0;
         const total = quantidade * valorUnitario;
-        
+
         totalInput.value = total.toLocaleString('pt-BR', {
             style: 'currency',
             currency: 'BRL'
         });
     }
 
-    // Adicionar eventos aos inputs
+    // Adicionar eventos aos inputs para calcular o total, sempre que for inserido um valor no campo QTD ou VL. Unitario.
     quantidadeInput.addEventListener('input', calcularTotal);
     valorUnitarioInput.addEventListener('input', calcularTotal);
 
     // Evento de submit do formulário
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
         e.preventDefault();
 
         // Capturar valores
@@ -35,11 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const valorUnitario = valorUnitarioInput.value;
         const total = totalInput.value;
 
-        // Validar campos obrigatórios
-        if (!nome || !quantidade || !valorUnitario) {
-            alert('Preencha todos os campos obrigatórios!');
-            return;
-        }
 
         // Clonar template
         const novoItem = template.cloneNode(true);
@@ -68,5 +63,25 @@ document.addEventListener('DOMContentLoaded', function() {
         // Limpar formulário
         form.reset();
         totalInput.value = ''; // Reset adicional para o campo total
+
+
+
+
+        // remanejamento de produtos, levar o produto de uma lista para outra , ao clicar no botão btn-done.
+        // Adicionar evento ao ícone de concluir
+        novoItem.querySelector('.btn-done').addEventListener('click', function () {
+            const listaFinalizados = document.getElementById('lista-prod-pegos');
+
+            // Move o item clicado para a lista de finalizados
+            listaFinalizados.appendChild(novoItem);
+
+            // Remove o evento de concluir (opcional)
+            this.removeEventListener('click', arguments.callee);
+        });
+
+        // Modificar a função de clique
+        novoItem.querySelector('.btn-done').addEventListener('click', function () {
+            const listaFinalizados = document.getElementById('lista-prod-pegos');
+        });
     });
 });
