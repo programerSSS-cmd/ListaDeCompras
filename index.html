@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lista de Compras</title>
-        
+
     </head>
     <body>
 
@@ -14,22 +14,21 @@
 
         <section id="section-prod">
             <form action id="frm-prod">
-                <input type="text" id="prod-input" placeholder="Digite um produto ...">
-                <input type="number" id="qtd-input" min="1" oninput="this.value = this.value < 1 ? 1 : this.value" placeholder="Digite a quantidade ...">
-                <button id="adicionar" > + </button>
+                <input type="text" id="prod-input"
+                    placeholder="Digite um produto ...">
+                <input type="number" id="qtd-input" min="1"
+                    oninput="this.value = this.value < 1 ? 1 : this.value"
+                    placeholder="Digite a quantidade ...">
+                <button id="adicionar"> + </button>
             </form>
 
         </section>
 
         <section id="lista_section">
-
-            <ul id="lista">
-                
-            </ul>
-
+            <ul id="lista"></ul>
         </section>
 
-        <button id="finalizar-lista"> Finalizar lista </button>
+        <button id="finalizar-lista" onclick="location.href='/listaFinalizada.html'">Finalizar lista</button>
 
     </body>
 

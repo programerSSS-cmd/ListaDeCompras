@@ -11,7 +11,14 @@ function adicionarProduto() {
         var produtoNome = document.createTextNode(prodTexto);
         var produtoqtd = document.createTextNode(prodqtdTexto);
         //mesclei o nome e a quantidade do produto junto ao elemento de Lista com somente append
-        novoli.append(produtoNome,' ', produtoqtd);
+        //Preciso que quando seja mesclado, criar um botão para exclusão deste novo item
+        var btnCancelaprod = document.createElement('button');
+        btnCancelaprod.textContent = '-';
+        btnCancelaprod.classList.add('btn-cancela-prod')
+        btnCancelaprod.addEventListener('click', function () {
+            novoli.remove();
+        });
+        novoli.append(produtoNome, ' : ', produtoqtd, ' ', btnCancelaprod);
 
         //agora eu quero pegar este elemento e exibir na minha lista
         //Pego meu elemento UL
@@ -25,7 +32,7 @@ function adicionarProduto() {
         document.querySelector("#qtd-input").value = "";
     }
 
-    
+
 }
 
 
@@ -36,6 +43,15 @@ btnadicionar.addEventListener('click', function (e) {
     e.preventDefault();
 
     adicionarProduto();
-    
+
 })
 
+//Salvar lista
+
+document.getElementById("finalizar-lista").addEventListener("click", () => {
+    const htmlDaLista = document.getElementById("lista").innerHTML;
+    
+    localStorage.setItem("listaDeCompras", htmlDaLista);
+    location.href = "listaFinalizada.html";
+
+});
