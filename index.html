@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Compras</title>
-</head>
-<body>
-    
-    <section>
-        <form action="">
-                <label for="">Produto : <input type="text"> </label>
-        </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Compras</title>
         
-    </section>
+    </head>
+    <body>
 
+        <header>
+            <h1>Lista de compras</h1>
+        </header>
 
+        <section id="section-prod">
+            <form action id="frm-prod">
+                <input type="text" id="prod-input" placeholder="Digite um produto ...">
+                <button id="adicionar" > + </button>
+            </form>
 
-</body>
+        </section>
+
+        <section id="lista_section">
+
+            <ul id="lista">
+                
+            </ul>
+
+        </section>
+
+    </body>
+
+    <script src="/js/scripts.js" defer></script>
 </html>
