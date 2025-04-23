@@ -1,15 +1,17 @@
 function adicionarProduto() {
 
     const prodTexto = document.getElementById('prod-input').value;
+    const prodqtdTexto = document.getElementById('qtd-input').value;
 
-    if (prodTexto) {
+    if (prodTexto && prodqtdTexto) {
 
         //criei o elemento LI
         var novoli = document.createElement('li');
-        //criei um elemento de texto com a variavel prodTexto, que seria o nome do produto inserido
-        var produtoNome = document.createTextNode(prodTexto)
-        //mesclei o nome do produto junto ao elemento de Lista
-        novoli.appendChild(produtoNome);
+        //criei um elemento de texto com a variavel prodTexto, que seria o nome do produto inserido e a quantidade
+        var produtoNome = document.createTextNode(prodTexto);
+        var produtoqtd = document.createTextNode(prodqtdTexto);
+        //mesclei o nome e a quantidade do produto junto ao elemento de Lista com somente append
+        novoli.append(produtoNome,' ', produtoqtd);
 
         //agora eu quero pegar este elemento e exibir na minha lista
         //Pego meu elemento UL
@@ -18,8 +20,9 @@ function adicionarProduto() {
         //mesclo o meu novoLi a minha tag de lista UL
         lista.appendChild(novoli);
 
-        //limpar campo do produto para inserção de um novo
+        //limpar campos
         document.querySelector("#prod-input").value = "";
+        document.querySelector("#qtd-input").value = "";
     }
 
     
