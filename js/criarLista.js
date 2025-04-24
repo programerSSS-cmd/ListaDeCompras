@@ -68,7 +68,8 @@ btnadicionar.addEventListener('click', function (e) {
 //Salvar lista
 
 document.getElementById("finalizar-lista").addEventListener("click", () => {
-
+    //previnir que a pagina seja recarregada.
+    e.preventDefault();
     const htmlDaLista = document.getElementById("lista").innerHTML;
 
     localStorage.setItem("listaDeCompras", htmlDaLista);
