@@ -9,7 +9,7 @@ function calcularTotal() {
     // Faz a soma de todos os itens (multiplicando quantidade x valor)
     qtdInputs.forEach((inputQtd, index) => {
         const quantidade = parseFloat(inputQtd.value) || 0;
-        const valor      = parseFloat(valorInputs[index].value) || 0;
+        const valor = parseFloat(valorInputs[index].value) || 0;
 
         // Verificando se os valores são válidos
         if (!isNaN(valor) && !isNaN(quantidade)) {
@@ -29,4 +29,3 @@ document.querySelectorAll(".btn-pego").forEach((btnPego) => {
         calcularTotal();
     });
 });
-

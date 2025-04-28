@@ -16,6 +16,8 @@ document.querySelectorAll(".btn-pego").forEach((botao) => {
 
         // Remove o botão de "pego" (✅), já que ele já foi clicado e o item foi marcado como finalizado
         //botao.remove();
+        // Muda o conteúdo do botão para um ícone de edição (por exemplo, "✏️")
+        botao.textContent = "✏️";  // Alterando o ícone para o símbolo de lápis
 
         // Move o item inteiro (o <li>) da lista atual para a lista de finalizados
         listaFinalizados.appendChild(item);
