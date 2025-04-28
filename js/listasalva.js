@@ -1,3 +1,13 @@
+// Botão para voltar à lista original
+const btnVoltar = document.getElementById("btn-voltar");
+
+if (btnVoltar) {
+    btnVoltar.addEventListener("click", () => {
+        // Quando o usuário clicar no botão, vamos redirecionar para index.html
+        window.location.href = "index.html";
+    });
+}
+
 // 1. Monta a lista da localStorage
 const ul = document.getElementById("lista-criada");
 ul.innerHTML = localStorage.getItem("listaDeCompras");
@@ -78,3 +88,5 @@ document.querySelectorAll(".btn-excluir").forEach((botao) => {
         recalcularTotal();
     });
 });
+
+
