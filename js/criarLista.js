@@ -73,10 +73,10 @@ document.getElementById("finalizar-lista").addEventListener("click", () => {
 
     
     localStorage.setItem("listaDeCompras", htmlDaLista);
-    /*goLive VS CODE
-    window.location.href = "../listaFinalizada.html";*/
+    /*goLive VS CODE*/
+    window.location.href = "../listaFinalizada.html";
 
     
-        window.location.href = "../ListaDeCompras/listaFinalizada";
+        // window.location.href = "../ListaDeCompras/listaFinalizada";
     
 });

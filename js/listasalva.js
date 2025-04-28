@@ -15,7 +15,7 @@ document.querySelectorAll(".btn-pego").forEach((botao) => {
         const listaFinalizados = document.getElementById("lista-finalizados");
 
         // Remove o botão de "pego" (✅), já que ele já foi clicado e o item foi marcado como finalizado
-        botao.remove();
+        //botao.remove();
 
         // Move o item inteiro (o <li>) da lista atual para a lista de finalizados
         listaFinalizados.appendChild(item);
