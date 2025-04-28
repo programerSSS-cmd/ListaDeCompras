@@ -19,6 +19,8 @@ document.querySelectorAll(".btn-pego").forEach((botao) => {
 
         // Move o item inteiro (o <li>) da lista atual para a lista de finalizados
         listaFinalizados.appendChild(item);
+        
+        calcularTotal();
     });
 });
 

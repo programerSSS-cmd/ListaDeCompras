@@ -72,6 +72,6 @@ document.getElementById("finalizar-lista").addEventListener("click", () => {
     const htmlDaLista = document.getElementById("lista").innerHTML;
 
     localStorage.setItem("listaDeCompras", htmlDaLista);
-    window.location.href = "../ListaDeCompras/listaFinalizada.html";
+    window.location.href = "../listaFinalizada.html";
 
 });
