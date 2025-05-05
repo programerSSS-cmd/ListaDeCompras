@@ -49,6 +49,9 @@ function adicionarProduto() {
         //limpar campos
         document.querySelector("#prod-input").value = "";
         document.querySelector("#qtd-input").value = "";
+
+        //alterar foo para colocar um novo produto
+        document.getElementById('prod-input').focus();
     }
 
 
@@ -65,7 +68,16 @@ btnadicionar.addEventListener('click', function (e) {
 
 })
 
-//Salvar lista
+/*Salvar lista
+const btnFinalizar = document.getElementById('finalizar-lista');
+btnFinalizar.addEventListener('click', () => {
+  document.body.classList.add('fade-out');
+  setTimeout(() => {
+    window.location.href = 'listaFinalizada.html';
+  }, 400); // deve coincidir com a duração do fadeOut
+});
+
+*/
 
 document.getElementById("finalizar-lista").addEventListener("click", () => {
 
