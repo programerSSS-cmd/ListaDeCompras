@@ -15,29 +15,34 @@ function adicionarProduto() {
         //criando um campo para quantidade
         const inputQtd = document.createElement("input");
         inputQtd.type = "number";
-        inputQtd.placeholder = "Quantidade Pega ...";
+        inputQtd.style.width = "40px";
+        inputQtd.placeholder = "Qtd.";
         inputQtd.classList.add("campo-qtd");
 
         // Campo de valor
         const inputValor = document.createElement("input");
         inputValor.type = "number";
-        inputValor.placeholder = "Valor Unitario ...";
+        inputValor.style.width = "40px"
+        inputValor.placeholder = "Vlr Uni.";
         inputValor.classList.add("campo-valor");
 
         // Botão de "Item Pego"
         const btnPego = document.createElement("button");
         btnPego.textContent = "✅";
+        btnPego.style.borderRadius = "5px";
         btnPego.classList.add("btn-pego");
 
         // Botão de excluir
         const btnExcluir = document.createElement("button");
         btnExcluir.textContent = "🗑️";
+        btnExcluir.style.backgroundColor = "red";
+        btnExcluir.style.borderRadius = "5px";
         btnExcluir.classList.add("btn-excluir");
         btnExcluir.addEventListener('click', function () {
             novoli.remove();
         });
 
-        novoli.append(produtoNome, ' : ', produtoqtd, ' ', inputQtd, inputValor, btnPego, btnExcluir);
+        novoli.append(produtoNome, '  ', produtoqtd, ' ', inputQtd, inputValor, btnPego, btnExcluir);
 
         //agora eu quero pegar este elemento e exibir na minha lista
         //Pego meu elemento UL
@@ -85,10 +90,10 @@ document.getElementById("finalizar-lista").addEventListener("click", () => {
 
     
     localStorage.setItem("listaDeCompras", htmlDaLista);
-    /*goLive VS CODE
-    window.location.href = "../listaFinalizada.html";*/
+    /*goLive VS CODE*/
+    window.location.href = "../listaFinalizada.html";
 
-    
+    /*
     window.location.href = "../ListaDeCompras/listaFinalizada";
-    
+    */
 });
