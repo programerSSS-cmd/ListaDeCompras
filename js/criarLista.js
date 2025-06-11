@@ -1,18 +1,14 @@
+document.getElementById('frm-prod').addEventListener('submit', function (e) {
+    e.preventDefault();
+    adicionarProduto();
+});
+
+
+
 function adicionarProduto() {
 
     const prodTexto = document.getElementById('prod-input').value;
     const prodqtdTexto = document.getElementById('qtd-input').value;
-    
-    if (prodTexto && prodqtdTexto) {
-        
-        document.getElementById('qtd-input').addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-            event.preventDefault(); // Impede o comportamento padrão (submeter o formulário)
-            document.getElementById('adicionar').click(); // Dispara o botão "Adicionar"
-        }
-    });
-
-
 
         //criei o elemento LI
         const novoli = document.createElement('li');
@@ -69,9 +65,6 @@ function adicionarProduto() {
     }
 
 
-}
-
-
 const btnadicionar = document.getElementById('adicionar')
 
 btnadicionar.addEventListener('click', function (e) {
@@ -82,16 +75,6 @@ btnadicionar.addEventListener('click', function (e) {
 
 })
 
-/*Salvar lista
-const btnFinalizar = document.getElementById('finalizar-lista');
-btnFinalizar.addEventListener('click', () => {
-  document.body.classList.add('fade-out');
-  setTimeout(() => {
-    window.location.href = 'listaFinalizada.html';
-  }, 400); // deve coincidir com a duração do fadeOut
-});
-
-*/
 
 document.getElementById("finalizar-lista").addEventListener("click", () => {
 
