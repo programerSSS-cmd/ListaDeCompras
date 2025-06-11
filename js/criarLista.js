@@ -6,8 +6,6 @@ document.getElementById('qtd-input').addEventListener('keydown', function (event
     }
 });
 
-
-
 function adicionarProduto() {
 
     const prodTexto = document.getElementById('prod-input').value;
@@ -63,7 +61,7 @@ function adicionarProduto() {
         document.querySelector("#prod-input").value = "";
         document.querySelector("#qtd-input").value = "";
 
-        //alterar foo para colocar um novo produto
+        //alterar foco para colocar um novo produto
         document.getElementById('prod-input').focus();
     }
 
