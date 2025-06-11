@@ -92,7 +92,7 @@ document.getElementById("finalizar-lista").addEventListener("click", () => {
         }, 500);*/
 
 
-        //GitPAGE
+        /*GitPAGE*/
         document.body.classList.add("fade-out");
 
         // Espera a animação acabar (0.5s) antes de redirecionar
