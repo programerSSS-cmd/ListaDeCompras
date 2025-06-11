@@ -16,6 +16,14 @@ if (btnVoltar) {
 const ul = document.getElementById("lista-criada");
 ul.innerHTML = localStorage.getItem("listaDeCompras");
 
+
+// Captura Enter pressionado no campo de valor
+document.getElementById('campo-valor').addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Impede o envio do form
+        document.getElementById('btn-pego').click(); // Simula o clique
+    }
+});
 // Seleciona todos os botões com a classe "btn-pego" (ou seja, todos os ✅ que estão na tela)
 document.querySelectorAll(".btn-pego").forEach((botao) => {
 
