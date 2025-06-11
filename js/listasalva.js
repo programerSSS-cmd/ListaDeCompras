@@ -3,8 +3,12 @@ const btnVoltar = document.getElementById("btn-voltar");
 
 if (btnVoltar) {
     btnVoltar.addEventListener("click", () => {
-        // Quando o usuário clicar no botão, vamos redirecionar para index.html
-        window.location.href = "index.html";
+        document.body.classList.add("fade-out");
+        
+        // Espera 500ms antes de redirecionar (tempo da animação)
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 500);
     });
 }
 

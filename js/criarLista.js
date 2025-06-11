@@ -4,7 +4,7 @@ function adicionarProduto() {
     const prodqtdTexto = document.getElementById('qtd-input').value;
 
     if (prodTexto && prodqtdTexto) {
-
+        
         //criei o elemento LI
         const novoli = document.createElement('li');
         //criei um elemento de texto com a variavel prodTexto, que seria o nome do produto inserido
@@ -90,10 +90,23 @@ document.getElementById("finalizar-lista").addEventListener("click", () => {
 
     
     localStorage.setItem("listaDeCompras", htmlDaLista);
-    /*goLive VS CODE*/
-    window.location.href = "../listaFinalizada.html";
+        /*goLive VS CODE
+    
+        document.body.classList.add("fade-out");
 
-    /*
-    window.location.href = "../ListaDeCompras/listaFinalizada";
-    */
+        // Espera a animação acabar (0.5s) antes de redirecionar
+        setTimeout(() => {
+            window.location.href = "../listaFinalizada.html"; // ou outra página
+        }, 500);*/
+
+
+        //GitPAGE
+        document.body.classList.add("fade-out");
+
+        // Espera a animação acabar (0.5s) antes de redirecionar
+        setTimeout(() => {
+            window.location.href = "../ListaDeCompras/listaFinalizada"; // ou outra página
+        }, 500);
+
+
 });
