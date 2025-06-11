@@ -2,9 +2,18 @@ function adicionarProduto() {
 
     const prodTexto = document.getElementById('prod-input').value;
     const prodqtdTexto = document.getElementById('qtd-input').value;
-
+    
     if (prodTexto && prodqtdTexto) {
         
+        document.getElementById('qtd-input').addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Impede o comportamento padrão (submeter o formulário)
+            document.getElementById('adicionar').click(); // Dispara o botão "Adicionar"
+        }
+    });
+
+
+
         //criei o elemento LI
         const novoli = document.createElement('li');
         //criei um elemento de texto com a variavel prodTexto, que seria o nome do produto inserido
