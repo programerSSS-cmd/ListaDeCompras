@@ -1,6 +1,9 @@
-document.getElementById('frm-prod').addEventListener('submit', function (e) {
-    e.preventDefault();
-    adicionarProduto();
+// Captura Enter pressionado no campo de quantidade
+document.getElementById('qtd-input').addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Impede o envio do form
+        document.getElementById('adicionar').click(); // Simula o clique
+    }
 });
 
 
@@ -63,7 +66,6 @@ function adicionarProduto() {
         //alterar foo para colocar um novo produto
         document.getElementById('prod-input').focus();
     }
-
 
 const btnadicionar = document.getElementById('adicionar')
 
