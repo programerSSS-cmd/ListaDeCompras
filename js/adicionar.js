@@ -11,7 +11,7 @@ adicionarClick.addEventListener('click', function adicionar() {
         //criando todos os elementos dinâmicamente e atrelando a lista
         let newProd = document.createElement('li')
         newProd.setAttribute('class', 'newProd')
-        newProd.innerHTML = prod.value
+        newProd.innerHTML = `${prod.value}  : `
         lista.appendChild(newProd)
 
         let newQtd = document.createElement('input')
