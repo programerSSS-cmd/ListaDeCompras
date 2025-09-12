@@ -10,35 +10,49 @@ adicionarClick.addEventListener('click', function adicionar() {
 
         //criando todos os elementos dinâmicamente e atrelando a lista
         let newProd = document.createElement('li')
-        newProd.setAttribute('class', 'newProd')
+        newProd.className = 'newProd'
         newProd.innerHTML = `${prod.value}  : `
         lista.appendChild(newProd)
 
         let newQtd = document.createElement('input')
-        newQtd.setAttribute('class', 'newQtd')
-        newQtd.setAttribute('type', 'number')
-        newQtd.setAttribute('placeholder', 'Digite a Quantidade...')
+        newQtd.className = 'newQtd'
+        newQtd.type = 'number'
+        newQtd.placeholder = 'Digite a Quantidade...'
         newProd.appendChild(newQtd)
 
         let newVlr = document.createElement('input')
-        newVlr.setAttribute('class', 'newVlr')
-         newVlr.setAttribute('type', 'number')
-        newVlr.setAttribute('placeholder', 'Digite o valor Unitario ...')
+        newVlr.className = 'newVlr'
+        newVlr.type = 'number'
+        newVlr.placeholder = 'Digite o valor Unitario ...'
         newProd.appendChild(newVlr)
 
+        // Adiciona eventos para calcular total ao alterar valores
+        newQtd.addEventListener('input', calcularTotal);
+        newVlr.addEventListener('input', calcularTotal);
+
         let btnExcluir = document.createElement('button')
-        btnExcluir.setAttribute('class', 'btnExcluir')
+        btnExcluir.className = 'btnExcluir'
         btnExcluir.innerHTML = 'Excluir'
         newProd.appendChild(btnExcluir)
+
+        btnExcluir.addEventListener('click', function () {
+            lista.removeChild(newProd);
+            calcularTotal(); // Atualiza o total após remoção
+        });
 
         //limpando e focando, campo para nova inserção de um novo produto
         if (newProd) {
             prod.value = ''
             prod.focus()
         }
-
     } else {
         alert('Nenhum produto encontrado, verifique e tente novamente ...')
     }
-})
 
+})
+//adicionando a opção de adicionar com ENTER do teclado
+document.getElementById('prod').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        adicionarClick.click(); // Simula o clique no botão "Adicionar"
+    }
+});
