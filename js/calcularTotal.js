@@ -20,3 +20,18 @@ function calcularTotal() {
     let tot = document.getElementById('ptotal')
     tot.innerHTML = `Total : ${total}`
 }
+
+//função para reativar os eventos de calculo após o carregamento de uma lista.
+
+function reativarEventosCalculo() {
+  const quantidades = document.querySelectorAll('.newQtd');
+  const valores = document.querySelectorAll('.newVlr');
+
+  quantidades.forEach(input => {
+    input.addEventListener('input', calcularTotal);
+  });
+
+  valores.forEach(input => {
+    input.addEventListener('input', calcularTotal);
+  });
+}

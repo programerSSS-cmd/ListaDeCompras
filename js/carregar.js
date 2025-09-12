@@ -18,6 +18,7 @@ function carregarLista() {
 
         // Insere o conteúdo HTML lido dentro da <ul> com id "lista"
         document.getElementById('lista').innerHTML = html;
+        reativarEventosCalculo();
     };
 
     // Inicia a leitura do arquivo como texto
