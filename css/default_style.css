@@ -1,0 +1,119 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 30px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #2c3e50;
+}
+
+/* Campo de entrada e botão */
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 300px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Lista geral */
+ul#lista {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 auto 40px auto;
+    max-width: 1000px; /* Mais largo */
+    width: 100%;
+}
+
+/* Item do produto com grid */
+.newProd {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto; /* Produto | Qtd | Valor | Botão */
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    border-left: 6px solid #3498db;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    min-height: 80px;
+}
+
+/* Inputs dentro da lista */
+.newQtd,
+.newVlr {
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Botão de excluir */
+.btnExcluir {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.btnExcluir:hover {
+    background-color: #c0392b;
+}
+
+/* Rodapé */
+footer {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer p#ptotal {
+    font-weight: bold;
+    font-size: 20px;
+}

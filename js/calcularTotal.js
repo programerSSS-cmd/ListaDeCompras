@@ -17,8 +17,16 @@ function calcularTotal() {
             total += mult
         }
     }
-    let tot = document.getElementById('ptotal')
-    tot.innerHTML = `Total : ${total}`
+
+    // Formata o valor como moeda em reais
+    let totalFormatado = total.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    });
+
+    // Atualiza o elemento com ID ptotal
+    document.getElementById('ptotal').innerText = `Total: ${totalFormatado}`;
+    
 }
 
 //função para reativar os eventos de calculo após o carregamento de uma lista.

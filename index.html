@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/default_style.css">
     <title>Testes</title>
 </head>
 
@@ -11,17 +12,21 @@
     <h1>Lista de Compras</h1>
 
     <p>Digite um produto : <input type="text" name="prod" id="prod" placeholder="Digite um Produto ..."> <button
-            type="button" id="btnAdicionar" name="btnAdicionar">Adicionar</button></p>
-
-    <ul id="lista"></ul>
-
-    <footer>
-        <p id="ptotal"> Total : 0 </p> <button id="salvar">Salvar</button>
+            type="button" id="btnAdicionar" name="btnAdicionar">Adicionar</button>
+        <button id="salvar">Salvar</button>
 
         <input type="file" id="arquivoInput" onchange="carregarLista()" style="display:none;">
         <button onclick="document.getElementById('arquivoInput').click()">Carregar</button>
 
         <button onclick="limparLista()">Limpar</button>
+    </p>
+
+    <ul id="lista"></ul>
+
+    <footer>
+
+        <p id="ptotal"> Total : 0 </p>
+
     </footer>
 </body>
 
