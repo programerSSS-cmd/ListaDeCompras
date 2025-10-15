@@ -1,23 +1,12 @@
-/* ==============================
-   RESPONSIVIDADE - MOBILE & TABLET
-   ============================== */
-
-/* ----------------------------
-   MOBILE - até 768px
-   ---------------------------- */
 @media (max-width: 768px) {
-
-    html,
-    body {
+    html, body {
         overflow-x: hidden;
-        /* evita scroll horizontal */
         max-width: 100vw;
     }
 
     body {
         padding: 10px;
         padding-bottom: 70px;
-        /* espaço para rodapé fixo */
         box-sizing: border-box;
     }
 
@@ -27,11 +16,10 @@
         text-align: center;
     }
 
-    /* 🔹 Linha de controles (input + 4 botões) */
+    /* Linha de controles */
     p {
         display: flex;
         flex-wrap: wrap;
-        /* permite quebrar em 2 linhas */
         justify-content: space-between;
         gap: 5px;
         width: 100%;
@@ -39,7 +27,6 @@
         box-sizing: border-box;
     }
 
-    /* Input ocupa 100% da primeira linha */
     p input[type="text"] {
         flex: 1 1 100%;
         font-size: 14px;
@@ -49,17 +36,15 @@
         box-sizing: border-box;
     }
 
-    /* Botões ocupam 25% cada na segunda linha */
     p button {
-        flex: 1 1 23%;
-        /* 23% para caber com gap */
+        flex: 1 1 24%;
         font-size: 14px;
         padding: 10px;
         border-radius: 4px;
         box-sizing: border-box;
     }
 
-    /* 🔹 Lista de produtos */
+    /* Lista de produtos */
     ul#lista {
         width: 100%;
         max-width: 100%;
@@ -70,8 +55,7 @@
 
     .newProd {
         display: grid;
-        grid-template-columns: 40% 20% 20% 20%;
-        /* Produto | Qtd | Valor | Botão */
+        grid-template-columns: 2fr 1fr 1fr 1fr; /* Produto | Qtd | Valor | Botão */
         align-items: center;
         gap: 10px;
         padding: 10px;
@@ -81,16 +65,19 @@
         box-sizing: border-box;
     }
 
+    .newProd > * {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        box-sizing: border-box;
+    }
+
     .newQtd,
     .newVlr,
     .btnExcluir {
-        width: 80%;
-        /* ocupa 100% da coluna */
-        max-width: 100%;
-        /* garante que não ultrapasse */
+        width: 100%;
         padding: 5px;
-        /* reduz padding para caber */
         box-sizing: border-box;
-
     }
 }
