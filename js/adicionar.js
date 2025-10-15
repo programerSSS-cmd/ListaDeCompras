@@ -45,6 +45,7 @@ adicionarClick.addEventListener('click', function adicionar() {
         if (newProd) {
             prod.value = ''
             prod.focus()
+            ajustarPlaceholdersMobile()
         }
     } else {
         alert('Nenhum produto encontrado, verifique e tente novamente ...')
