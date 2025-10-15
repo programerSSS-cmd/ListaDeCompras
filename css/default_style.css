@@ -103,17 +103,29 @@ ul#lista {
     background-color: #c0392b;
 }
 
-/* Rodapé */
-footer {
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
+/* 🔹 Rodapé e total */
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        border-top: 1px solid #ccc;
+        background-color: #fff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+    }
 
-footer p#ptotal {
+    footer p#ptotal {
+    font-size: 18px;
     font-weight: bold;
-    font-size: 20px;
-}
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;

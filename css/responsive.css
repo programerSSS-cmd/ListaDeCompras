@@ -1,0 +1,160 @@
+/* ==============================
+   RESPONSIVIDADE - MOBILE & TABLET
+   ============================== */
+
+/* ----------------------------
+   MOBILE - até 768px
+   ---------------------------- */
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+        padding-bottom: 70px;
+        /* Espaço para o rodapé fixo */
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Linha de controles: input + 4 botões */
+    p {
+        display: grid;
+        grid-template-columns: 30% 15% 15% 15% 15%;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+        margin: 0 auto 20px auto;
+        max-width: 100%;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    /* Lista de produtos */
+    ul#lista {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 10px auto 30px auto;
+    }
+
+    .newProd {
+        display: grid;
+        grid-template-columns: 40% 20% 20% 20%;
+        /* Produto | Qtd | Valor | Botão */
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border-left: 5px solid #3498db;
+        border-radius: 6px;
+    }
+
+    .newQtd,
+    .newVlr,
+    .btnExcluir {
+        width: 100%;
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    /* Rodapé fixo e total */
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        border-top: 1px solid #ccc;
+        background-color: #fff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        text-align: center;
+    }
+
+    footer p#ptotal {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2c3e50;
+        margin: 0;
+    }
+}
+
+/* ----------------------------
+   TABLET - 769px até 1024px
+   ---------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    /* Linha de controles - mantém padrão desktop */
+    p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    input[type="text"] {
+        width: 50%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    /* Lista de produtos */
+    ul#lista {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto 40px auto;
+    }
+
+    .newProd {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr auto;
+        /* Produto | Qtd | Valor | Botão */
+        gap: 15px;
+        padding: 18px;
+        font-size: 16px;
+        border-left: 5px solid #3498db;
+        border-radius: 6px;
+    }
+
+    .newQtd,
+    .newVlr,
+    .btnExcluir {
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+    }
+}
