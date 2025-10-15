@@ -19,6 +19,9 @@ function carregarLista() {
         // Insere o conteúdo HTML lido dentro da <ul> com id "lista"
         document.getElementById('lista').innerHTML = html;
         reativarEventosCalculo();
+
+        // 🔥 Calcula o total imediatamente após carregar
+        calcularTotal();
     };
 
     // Inicia a leitura do arquivo como texto
