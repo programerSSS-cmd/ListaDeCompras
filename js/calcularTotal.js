@@ -3,30 +3,32 @@
 //digitados pelo usuario.
 
 function calcularTotal() {
-    let newlista = document.getElementsByClassName('newProd')
-    let qtd = document.getElementsByClassName('newQtd')
-    let vlr = document.getElementsByClassName('newVlr')
-    let total = 0;
+  let newlista = document.getElementsByClassName('newProd')
+  let qtd = document.getElementsByClassName('newQtd')
+  let vlr = document.getElementsByClassName('newVlr')
+  let total = 0;
 
-    if (lista.childElementCount == 0) {
-        alert('listaVazia')
-    } else {
+  if (lista.childElementCount == 0) {
 
-        for (let x = 0; x < newlista.length; x++) {
-            let mult = qtd[x].value * vlr[x].value
-            total += mult
-        }
+    alertListaVazia()
+
+  } else {
+
+    for (let x = 0; x < newlista.length; x++) {
+      let mult = qtd[x].value * vlr[x].value
+      total += mult
     }
+  }
 
-    // Formata o valor como moeda em reais
-    let totalFormatado = total.toLocaleString('pt-BR', {
-        style: 'currency',
-        currency: 'BRL'
-    });
+  // Formata o valor como moeda em reais
+  let totalFormatado = total.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  });
 
-    // Atualiza o elemento com ID ptotal
-    document.getElementById('ptotal').innerText = `Total: ${totalFormatado}`;
-    
+  // Atualiza o elemento com ID ptotal
+  document.getElementById('ptotal').innerText = `Total: ${totalFormatado}`;
+
 }
 
 //função para reativar os eventos de calculo após o carregamento de uma lista.

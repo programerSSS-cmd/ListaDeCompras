@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="./css/default_style.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <title>Lista de Compras</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    
 </head>
 
 <body>
     <h1>Lista de Compras</h1>
 
-    <p><input type="text" name="prod" id="prod" placeholder="Digite um Produto ..."> <button
-            type="button" id="btnAdicionar" name="btnAdicionar">Adicionar</button>
+    <p><input type="text" name="prod" id="prod" placeholder="Digite um Produto ..."> <button type="button"
+            id="btnAdicionar" name="btnAdicionar">Adicionar</button>
         <button id="salvar">Salvar</button>
 
         <input type="file" id="arquivoInput" onchange="carregarLista()" style="display:none;">
@@ -39,5 +39,6 @@
 <script src="./js/carregar.js"></script>
 <script src="./js/limpar.js"></script>
 <script src="./js/responsive.js"></script>
+<script src="./js/alerts.js"></script>
 
 </html>
