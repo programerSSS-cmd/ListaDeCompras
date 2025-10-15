@@ -73,6 +73,15 @@
         border-left: 5px solid #3498db;
         border-radius: 6px;
         box-sizing: border-box;
+        overflow: hidden; /* impede que conteúdo extrapole a linha */
+    }
+
+    .newProd > * {
+        min-width: 0; /* essencial para que input e span respeitem a coluna */
+        overflow: hidden; 
+        text-overflow: ellipsis; /* corta o texto que extrapola */
+        white-space: nowrap; /* mantém texto em linha única */
+        box-sizing: border-box;
     }
 
     .newQtd,
