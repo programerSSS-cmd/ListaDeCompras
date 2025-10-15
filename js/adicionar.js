@@ -33,6 +33,7 @@ adicionarClick.addEventListener('click', function adicionar() {
         let btnExcluir = document.createElement('button')
         btnExcluir.className = 'btnExcluir'
         btnExcluir.innerHTML = 'Excluir'
+        btnExcluir.innerHTML = '🗑️';
         newProd.appendChild(btnExcluir)
 
         btnExcluir.addEventListener('click', function () {
