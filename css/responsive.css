@@ -7,17 +7,14 @@
    ---------------------------- */
 @media (max-width: 768px) {
 
-    html,
-    body {
-        overflow-x: hidden;
-        /* evita scroll horizontal */
+    html, body {
+        overflow-x: hidden; /* evita scroll horizontal */
         max-width: 100vw;
     }
 
     body {
         padding: 10px;
-        padding-bottom: 70px;
-        /* espaço para rodapé fixo */
+        padding-bottom: 70px; /* espaço para rodapé fixo */
         box-sizing: border-box;
     }
 
@@ -29,20 +26,18 @@
 
     /* 🔹 Linha de controles (input + 4 botões) */
     p {
-        display: grid;
-        grid-template-columns: 4fr 1.5fr 1.5fr 1.5fr 1.5fr;
-        /* 40% / 15% / 15% / 15% / 15% usando fr */
-        justify-content: center;
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap; /* permite quebrar em 2 linhas */
+        justify-content: space-between;
         gap: 5px;
         width: 100%;
         margin: 0 auto 20px auto;
-        max-width: 100%;
         box-sizing: border-box;
     }
 
-    input[type="text"] {
-        width: 100%;
+    /* Input ocupa 100% da primeira linha */
+    p input[type="text"] {
+        flex: 1 1 100%;
         font-size: 14px;
         padding: 10px;
         border-radius: 4px;
@@ -50,8 +45,9 @@
         box-sizing: border-box;
     }
 
-    button {
-        width: 100%;
+    /* Botões ocupam 25% cada na segunda linha */
+    p button {
+        flex: 1 1 23%; /* 23% para caber com gap */
         font-size: 14px;
         padding: 10px;
         border-radius: 4px;
@@ -69,8 +65,7 @@
 
     .newProd {
         display: grid;
-        grid-template-columns: 40% 20% 20% 20%;
-        /* Produto | Qtd | Valor | Botão */
+        grid-template-columns: 40% 20% 20% 20%; /* Produto | Qtd | Valor | Botão */
         align-items: center;
         gap: 10px;
         padding: 10px;
@@ -89,7 +84,7 @@
         box-sizing: border-box;
     }
 
-    /* 🔹 Rodapé fixo e total */
+    /* 🔹 Rodapé fixo */
     footer {
         width: 100%;
         display: flex;
@@ -111,6 +106,7 @@
         font-weight: bold;
         color: #2c3e50;
         margin: 0;
+        text-align: center;
     }
 }
 
@@ -119,10 +115,8 @@
    ---------------------------- */
 @media (min-width: 769px) and (max-width: 1024px) {
 
-    html,
-    body {
+    html, body {
         overflow-x: hidden;
-        /* garante sem scroll horizontal */
     }
 
     body {
@@ -167,8 +161,7 @@
 
     .newProd {
         display: grid;
-        grid-template-columns: 1.5fr 1fr 1fr auto;
-        /* Produto | Qtd | Valor | Botão */
+        grid-template-columns: 1.5fr 1fr 1fr auto; /* Produto | Qtd | Valor | Botão */
         gap: 15px;
         padding: 18px;
         font-size: 16px;
@@ -187,8 +180,7 @@
     }
 
     footer {
-        position: relative;
-        /* rodapé não fixo no tablet */
+        position: relative; /* rodapé não fixo no tablet */
         padding: 20px 0;
         width: 100%;
         box-sizing: border-box;
