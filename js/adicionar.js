@@ -37,8 +37,16 @@ adicionarClick.addEventListener('click', function adicionar() {
         newProd.appendChild(btnExcluir)
 
         btnExcluir.addEventListener('click', function () {
-            lista.removeChild(newProd);
-            calcularTotal(); // Atualiza o total após remoção
+            alertCerteza().then(confirmUser => {
+                if (confirmUser) {
+                    // confirmar exclusão
+                    lista.removeChild(newProd);
+                    calcularTotal();
+                    console.log('Excluído');
+                } else {
+                    console.log('Exclusão cancelada');
+                }
+            });
         });
 
         //limpando e focando, campo para nova inserção de um novo produto
@@ -48,7 +56,7 @@ adicionarClick.addEventListener('click', function adicionar() {
             ajustarPlaceholdersMobile()
         }
     } else {
-        alert('Nenhum produto encontrado, verifique e tente novamente ...')
+        alertNenhumProduto()
     }
 
 })

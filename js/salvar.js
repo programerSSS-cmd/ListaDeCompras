@@ -3,7 +3,7 @@ salvar.addEventListener('click', function salvar() {
     const lista = document.getElementById('lista');
 
     if (lista.childElementCount === 0) {
-        alert('Nada encontrado para salvarmos ...');
+        alertNenhumProduto()
         return;
     }
 

@@ -5,9 +5,12 @@ function limparLista() {
   // Remove cada item encontrado
   itens.forEach(item => item.remove());
 
-  // Opcional: limpar o total também, se desejar
+  // Limpa o total também
   const tot = document.getElementById('ptotal');
   if (tot) {
     tot.innerHTML = "Total : 0";
   }
+
+  // 🔔 Mostra o alerta informando que a lista foi limpa
+  alertListaVazia();
 }

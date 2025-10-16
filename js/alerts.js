@@ -8,15 +8,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 function alertListaVazia() {
     Swal.fire({
         title: 'Aviso',
@@ -24,15 +15,49 @@ function alertListaVazia() {
         icon: 'info',
         confirmButtonText: 'OK',
         position: 'top',
-        timer: 5000,
+        timer: 2000,
         timerProgressBar: true
-        
+
     });
 }
 
+function alertNenhumProduto() {
+    Swal.fire({
+        title: 'Aviso',
+        text: 'Nenhum produto encontrado, Verifique e tente novamente ...',
+        icon: 'info',
+        confirmButtonText: 'OK',
+        position: 'top',
+        timer: 2000,
+        timerProgressBar: true
 
+    });
+}
+function alertCarregarLista() {
+    Swal.fire({
+        title: 'Aviso',
+        text: 'Não conseguimos importar o arquivo, verifique e tente novamente...',
+        icon: 'info',
+        confirmButtonText: 'OK',
+        position: 'top',
+        timer: 2000,
+        timerProgressBar: true
 
-
+    });
+}
+function alertCerteza() {
+    return Swal.fire({
+        title: 'Alerta',
+        text: 'Deseja realmente excluir o produto?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim',
+        cancelButtonText: 'Não',
+        position: 'top'
+    }).then(result => {
+        return !!result.isConfirmed; // true ou false
+    });
+}
 
 
 
