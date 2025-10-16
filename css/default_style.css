@@ -97,10 +97,7 @@ ul#lista {
     font-size: 15px;
     white-space: nowrap;
     transition: background-color 0.3s ease;
-}
-
-.btnExcluir:hover {
-    background-color: #c0392b;
+    margin-left: 30px;
 }
 
 /* 🔹 Rodapé e total */

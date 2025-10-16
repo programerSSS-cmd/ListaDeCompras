@@ -36,11 +36,11 @@ function alertNenhumProduto() {
 function alertCarregarLista() {
     Swal.fire({
         title: 'Aviso',
-        text: 'Não conseguimos importar o arquivo, verifique e tente novamente...',
+        text: 'Não conseguimos importar o arquivo, verifique-o e tente novamente...',
         icon: 'info',
         confirmButtonText: 'OK',
         position: 'top',
-        timer: 2000,
+        timer: 4000,
         timerProgressBar: true
 
     });
