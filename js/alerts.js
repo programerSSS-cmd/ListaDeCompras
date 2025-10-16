@@ -14,7 +14,7 @@ function alertListaVazia() {
         text: 'Lista Vazia',
         icon: 'info',
         confirmButtonText: 'OK',
-        position: 'top',
+        position: 'center',
         timer: 2000,
         timerProgressBar: true
 
@@ -27,7 +27,7 @@ function alertNenhumProduto() {
         text: 'Nenhum produto encontrado, Verifique e tente novamente ...',
         icon: 'info',
         confirmButtonText: 'OK',
-        position: 'top',
+        position: 'center',
         timer: 2000,
         timerProgressBar: true
 
@@ -39,7 +39,7 @@ function alertCarregarLista() {
         text: 'Não conseguimos importar o arquivo, verifique-o e tente novamente...',
         icon: 'info',
         confirmButtonText: 'OK',
-        position: 'top',
+        position: 'center',
         timer: 4000,
         timerProgressBar: true
 
