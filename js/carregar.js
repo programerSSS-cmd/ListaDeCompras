@@ -33,8 +33,24 @@ function carregarLista() {
 
         // Reativa eventos e recalcula o total
         reativarEventosCalculo();
+        reativarEventosExclusao();
         calcularTotal();
     };
 
     leitor.readAsText(arquivo);
+}
+
+
+function reativarEventosExclusao() {
+    const botoesExcluir = document.querySelectorAll('.btnExcluir');
+
+    botoesExcluir.forEach(btn => {
+        btn.onclick = function () {
+            const li = this.closest('li');
+            if (li) {
+                li.remove();
+                calcularTotal();
+            }
+        };
+    });
 }
