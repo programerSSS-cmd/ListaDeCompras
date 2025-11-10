@@ -1,16 +1,15 @@
-function limparLista() {
-  // Seleciona todos os <li> com a classe 'newProd'
-  const itens = document.querySelectorAll('li.newProd');
+async function limparLista() {
 
-  // Remove cada item encontrado
-  itens.forEach(item => item.remove());
+  // 1. ESPERA o usuário responder
+  const confirmUser = await alertCerteza();
 
-  // Limpa o total também
-  const tot = document.getElementById('ptotal');
-  if (tot) {
-    tot.innerHTML = "Total : 0";
-  }
+  // 2. Se o usuário clicar "Não" → cancela
+  if (!confirmUser) return;
 
-  // 🔔 Mostra o alerta informando que a lista foi limpa
+  // 3. Se clicou "Sim" → limpa a lista
+  document.querySelectorAll('li.newProd').forEach(item => item.remove());
+  document.getElementById('ptotal').innerHTML = "Total : 0";
+
+  // 4. Mostra alerta final
   alertListaVazia();
 }

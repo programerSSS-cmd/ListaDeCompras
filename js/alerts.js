@@ -45,19 +45,19 @@ function alertCarregarLista() {
 
     });
 }
-function alertCerteza() {
-    return Swal.fire({
-        title: 'Alerta',
-        text: 'Deseja realmente excluir o produto?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonText: 'Sim',
-        cancelButtonText: 'Não',
-        position: 'bottom'
-    }).then(result => {
-        return !!result.isConfirmed; // true ou false
-    });
-}
+    function alertCerteza() {
+        return Swal.fire({
+            title: 'Alerta',
+            text: 'Deseja realmente excluir?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Sim',
+            cancelButtonText: 'Não',
+            position: 'bottom'
+        }).then(result => {
+            return !!result.isConfirmed; // true ou false
+        });
+    }
 
 
 
