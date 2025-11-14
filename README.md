@@ -1,4 +1,4 @@
-[README_EN.md](https://github.com/user-attachments/files/23548749/README_EN.md)
+[README_EN.md]
 # 🛒 Shopping List System
 
 A simple and efficient application to manage shopping lists, developed
@@ -91,7 +91,7 @@ Empty list alert\
 System developed by [Erick Rodrigues](https://www.linkedin.com/in/erickrodrigues-cmd/), focusing on organization, practicality, and JavaScript study.
 
 
-[README_PT.md](https://github.com/user-attachments/files/23548752/README_PT.md)
+[README_PT.md]
 # 🛒 Sistema de Lista de Compras
 
 Um aplicativo simples e eficiente para gerenciamento de listas de
